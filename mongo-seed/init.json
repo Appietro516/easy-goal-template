@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6231580fd8480cd1ab5bc8f1"
+  },
+  "name": "Get an A in SWE",
+  "description": "Complete a successful presentation, build a good project",
+  "deadline": "23:15:30 GMT+0200 (CEST)",
+  "category": "Academic"
+},{
+  "_id": {
+    "$oid": "62315851d8480cd1ab5bc8f2"
+  },
+  "name": "Finish Chores",
+  "description": "Finish Laundry, Buy Groceries, etc.",
+  "deadline": "23:15:30 GMT+0200 (CEST)",
+  "category": "Personal"
+},{
+  "_id": {
+    "$oid": "62315880d8480cd1ab5bc8f3"
+  },
+  "name": "Book Fair",
+  "description": "Go to student union for book exchange",
+  "deadline": "23:15:30 GMT+0200 (CEST)",
+  "category": "Misc"
+}]

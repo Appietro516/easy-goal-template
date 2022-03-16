@@ -7,6 +7,7 @@ services:
       - 8080:8080
     env_file:
       - .env
+      
 
   mongodb:
     image: bitnami/mongodb:latest
@@ -14,6 +15,11 @@ services:
       - 27017:27017
     volumes:
       - data:/bitnami/mongodb
+
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongodb
 
 
 volumes:
