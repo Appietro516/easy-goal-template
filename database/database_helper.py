@@ -1,11 +1,10 @@
-def student_helper(student) -> dict:
+def goal_helper(goal) -> dict:
     return {
-        "id": str(student['_id']),
-        "fullname": student['fullname'],
-        "email": student['email'],
-        "course_of_study": student['course_of_study'],
-        "year": student['year'],
-        "GPA": student['gpa']
+        "id": str(goal['_id']),
+        "name": goal['name'],
+        "description": goal['description'],
+        "deadline": goal['deadline'],
+        "category": goal['category']
     }
 
 def admin_helper(admin) -> dict:
