@@ -1,4 +1,6 @@
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
+
 
 from auth.jwt_bearer import JWTBearer
 from routes.goal import router as GoalRouter
@@ -6,7 +8,19 @@ from routes.admin import router as AdminRouter
 
 app = FastAPI()
 
+origins = [
+    "*",
+]
+
 token_listener = JWTBearer()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/", tags=["Root"])
 async def read_root():
