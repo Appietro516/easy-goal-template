@@ -1,11 +1,13 @@
 # Easy Goal Backend REST API
 ## Dependencies
 Dependencies to run:
-docker
-docker-compose
+
+- docker
+- docker-compose
 
 Dependancies for development:
-python3.8
+
+- python3.8
 
 ## Running the API
 To run REST API (from top level directory):
