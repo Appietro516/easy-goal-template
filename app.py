@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from auth.jwt_bearer import JWTBearer
 from routes.goal import router as GoalRouter
 from routes.admin import router as AdminRouter
+from routes.progress import router as ProgressRouter
 
 app = FastAPI()
 
@@ -29,3 +30,4 @@ async def read_root():
 
 app.include_router(AdminRouter, tags=["Administrator"], prefix="/admin")
 app.include_router(GoalRouter, tags=["Goals"], prefix="/goal") #dependencies=[Depends(token_listener)])
+app.include_router(ProgressRouter, tags=["Progresses"], prefix="/progress")
