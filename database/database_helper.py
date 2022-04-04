@@ -13,3 +13,12 @@ def admin_helper(admin) -> dict:
         "fullname": admin['fullname'],
         "email": admin['email'],
     }
+
+def progress_helper(progress) -> dict:
+    return {
+        "id": str(progress['_id']),
+        "name": progress['name'],
+        "value": progress['value'],
+        "entry": progress['deadline'],
+        "goal_name": progress['goal_name']
+    }
