@@ -1,12 +1,15 @@
 import motor.motor_asyncio
 from bson import ObjectId
 from decouple import config
+import asyncio
 
 from .database_helper import goal_helper, admin_helper, progress_helper
 
 MONGO_DETAILS = config('MONGO_DETAILS')
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
+client.get_io_loop = asyncio.get_event_loop
+
 
 database = client.goals
 

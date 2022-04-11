@@ -28,5 +28,8 @@ python3 -m venv backend_env
 source backend_env/bin/activate
 pip3 install --upgrade pip
 pip3 install -r requirements.txt
+cp .env.sample .env
+Set MONGO_DETAILS in .env to localhost instead of mongodb
+docker-compose up --build --force-recreate
 pytest
 ```
