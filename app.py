@@ -6,6 +6,7 @@ from auth.jwt_bearer import JWTBearer
 from routes.goal import router as GoalRouter
 from routes.admin import router as AdminRouter
 from routes.progress import router as ProgressRouter
+from routes.email import router as EmailRouter
 
 app = FastAPI()
 
@@ -31,3 +32,4 @@ async def read_root():
 app.include_router(AdminRouter, tags=["Administrator"], prefix="/admin")
 app.include_router(GoalRouter, tags=["Goals"], prefix="/goal") #dependencies=[Depends(token_listener)])
 app.include_router(ProgressRouter, tags=["Progresses"], prefix="/progress")
+app.include_router(EmailRouter, tags=["Email"], prefix="/email")

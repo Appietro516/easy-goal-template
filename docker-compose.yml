@@ -21,6 +21,8 @@ services:
     links:
       - mongodb
 
+  nginx:
+    image: nginx
 
 volumes:
   data:
